@@ -1,6 +1,8 @@
 {
  imports = [
-   "./git.nix"
-   "./discord.nix"
- ] 
+   ./discord.nix
+   ./git.nix
+   ./steam.nix
+   ./prismlauncher.nix
+ ]; 
 }

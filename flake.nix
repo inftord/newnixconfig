@@ -18,13 +18,17 @@
 	    modules = [	
               ./hosts/acertop/configuration.nix
 	       zapret-discord-youtube.nixosModules.default {}
-	    ];
-    };
-    homeConfigurations.river = home-manager.lib.homeManagerConfiguration {
-		pkgs = nixpkgs.legacyPackages.x86-64-linux;
-		home-manager.useGlobalPkgs = true;
-            	home-manager.useUserPackages = true;
-           	 home-manager.users.jdoe = ./hosts/acertop/home-manager/home.nix;
+	       home-manager.nixosModules.home-manager
+               {
+           	 home-manager.useGlobalPkgs = true;
+           	 home-manager.useUserPackages = true;
+
+           	 # TODO replace ryan with your own username
+           	 home-manager.users.river = import ./hosts/acertop/home-manager/home.nix;
+
+           	 # Optionally, use home-manager.extraSpecialArgs to pass arguments to home.nix
+               }	
+	];
     };
   };
 }
