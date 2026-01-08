@@ -1,15 +1,19 @@
 {
-  description = "A very basic flake";
+  description = "A simple NixOS flake";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
+    # NixOS official package source, using the nixos-25.11 branch here
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
   };
 
-  outputs = { self, nixpkgs }: {
-
-    packages.x86_64-linux.hello = nixpkgs.legacyPackages.x86_64-linux.hello;
-
-    packages.x86_64-linux.default = self.packages.x86_64-linux.hello;
-
+  outputs = { self, nixpkgs, ... }@inputs: {
+    # Please replace my-nixos with your hostname
+    nixosConfigurations.acertop = nixpkgs.lib.nixosSystem {
+      modules = [
+        # Import the previous configuration.nix we used,
+        # so the old configuration file still takes effect
+        ./hosts/acertop/configuration.nix
+      ];
+    };
   };
 }
