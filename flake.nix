@@ -8,12 +8,13 @@
    
   };
 
-  outputs = { self, nixpkgs, ... }@inputs: {
+  outputs = { self, nixpkgs, zapret-discord-youtube, ... }@inputs: {
     # Please replace my-nixos with your hostname
     nixosConfigurations.acertop = nixpkgs.lib.nixosSystem {
     	    system = "x86_64-linux";
 	    modules = [	
               ./hosts/acertop/configuration.nix
+	       zapret-discord-youtube.nixosModules.default {}
 	    ];
 	};
   };
