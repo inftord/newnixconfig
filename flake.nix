@@ -4,6 +4,7 @@
   inputs = {
     # NixOS official package source, using the nixos-25.11 branch here
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
   };
 
   outputs = { self, nixpkgs, ... }@inputs: {
