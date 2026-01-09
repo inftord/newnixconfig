@@ -1,8 +1,8 @@
 {
  imports = [
-   ./discord.nix
-   ./git.nix
-   ./steam.nix
-   ./prismlauncher.nix
+   ./packages/discord.nix
+   ./packages/git.nix
+   ./packages/steam.nix
+   ./packages/prismlauncher.nix
  ]; 
 }
