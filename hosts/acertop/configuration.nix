@@ -26,6 +26,11 @@
   # Install firefox.
   programs.firefox.enable = true;
 
+  programs.steam = {
+    enable = true; # Master switch, already covered in installation
+    remotePlay.openFirewall = true;  # Open ports in the firewall for Steam Remote Play
+    dedicatedServer.openFirewall = true; # Open ports for Source Dedicated Server hosting
+  };
 
   programs.amnezia-vpn.enable = true;
   # List packages installed in system profile. To search, run:
@@ -36,6 +41,9 @@
 	pantum-driver
 	git
 	libreoffice-qt
+        wayland-utils # Wayland utilities
+        wl-clipboard
+	steam
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
