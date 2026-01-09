@@ -1,7 +1,7 @@
 {
 	imports = [
 		./kernel.nix
-		./services/zapret.nix
-		./packages/nh.nix
+		./services/bundle.nix
+		./packages/bundle.nix
 	];
 }
