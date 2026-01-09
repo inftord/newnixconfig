@@ -12,6 +12,7 @@
    ./printing.nix
    ./time.nix
    ./dnscrypt-proxy.nix
+   ./scx.nix
  ]; 
 }
 
