@@ -18,6 +18,8 @@
     "snd_soc_avs"
   ];
 
+  services.printing.drivers = [ pkgs.pantum-driver ];
+
   networking.hostName = "acertop"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
@@ -25,7 +27,6 @@
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
-  nix.binaryCaches = [ "https://aseipp-nix-cache.global.ssl.fastly.net" ];
 
     boot.kernelModules = [ "tcp_bbr" ];
     boot.kernel.sysctl."net.ipv4.tcp_congestion_control" = "bbr";
@@ -113,7 +114,9 @@
   environment.systemPackages = with pkgs; [
 	telegram-desktop
 	fish
+	pantum-driver
 	git
+	libreoffice-qt
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
