@@ -6,5 +6,5 @@
     # If using dhcpcd:
     dhcpcd.extraConfig = "nohook resolv.conf";
   };
-  
+  hardware.wirelessRegulatoryDatabase = true;  
 }
