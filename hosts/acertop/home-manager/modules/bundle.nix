@@ -5,5 +5,6 @@
    ./packages/prismlauncher.nix
    ./packages/btop.nix
    ./packages/fastfetch.nix
+   ./packages/fluffychat.nix
  ]; 
 }

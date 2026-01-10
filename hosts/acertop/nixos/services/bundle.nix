@@ -13,6 +13,7 @@
    ./time.nix
    ./dnscrypt-proxy.nix
    ./scx.nix
+   ./zram.nix
  ]; 
 }
 
