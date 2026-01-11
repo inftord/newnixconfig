@@ -6,5 +6,6 @@
    ./packages/btop.nix
    ./packages/fastfetch.nix
    ./packages/fluffychat.nix
+   ./packages/vscode.nix
  ]; 
 }

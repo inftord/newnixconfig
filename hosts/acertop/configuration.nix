@@ -45,6 +45,7 @@
         wl-clipboard
 	steam
 	element-desktop
+	
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

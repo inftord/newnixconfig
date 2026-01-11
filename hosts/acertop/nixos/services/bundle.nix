@@ -14,6 +14,7 @@
    ./dnscrypt-proxy.nix
    ./scx.nix
    ./zram.nix
+   ./earlyoom.nix
  ]; 
 }
 
